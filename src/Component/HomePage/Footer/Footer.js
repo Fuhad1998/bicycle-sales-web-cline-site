@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 
 const Footer = () => {
   return (
-   <div className="row p-5">
+   <div className="row p-5 bg-white">
        <div >
            <Button><i class="fa-brands fa-facebook"></i>Facebook</Button>
        </div>
