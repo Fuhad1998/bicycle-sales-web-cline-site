@@ -27,12 +27,12 @@ const Login = () => {
         />
         <br />
         <input
-          className="btn-submit input-btn login-bac-color text-white fs-5 rounded"
+          className="btn-submit input-btn btn btn-primary login-bac-color text-white fs-5 rounded"
           type="submit"
           value="Login"
         />
         <br />
-        <button  className="btn-submit input-btn login-bac-color text-white fs-5 rounded ">
+        <button  className="btn-submit input-btn btn btn-primary login-bac-color text-white fs-5 rounded ">
           Google Sign-in
         </button>
         <br />
