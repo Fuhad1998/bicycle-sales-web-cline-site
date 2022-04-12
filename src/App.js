@@ -16,6 +16,9 @@ import Login from './Component/Login/Login';
 import Products from './Component/HomePage/Products/Products';
 import AllProducts from './Component/AllProducts/AllProducts';
 import ProductDetale from './Component/ProductDetale/ProductDetale';
+import Reviews from './Component/Reviews/Reviews';
+import Purchase from './Component/Purchas/Purchase';
+
 
 
 
@@ -26,6 +29,12 @@ function App() {
         <Header></Header>
         <Switch>
           
+          <Route path="/purchase">
+            <Purchase></Purchase>
+          </Route>
+          <Route path="/reviews">
+            <Reviews></Reviews>
+          </Route>
           <Route path="/productDetale">
             <ProductDetale></ProductDetale>
           </Route>

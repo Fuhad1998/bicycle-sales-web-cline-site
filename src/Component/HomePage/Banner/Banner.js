@@ -19,7 +19,7 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-           <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
+           <Button><Link className='text-white buy-now-btn' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={500}>
@@ -29,7 +29,7 @@ const Banner = () => {
             alt="Second slide"
           />
           <Carousel.Caption>
-          <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
+          <Button><Link className='text-white buy-now-btn' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -39,7 +39,7 @@ const Banner = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-          <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
+          <Button><Link className='text-white buy-now-btn' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
