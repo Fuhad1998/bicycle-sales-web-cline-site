@@ -1,6 +1,7 @@
 
 
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import img1 from "../../../img/banner/New Project (6).jpg"
 import img2 from "../../../img/banner/New Project (7).jpg"
 import img3 from "../../../img/banner/New Project (8).jpg"
@@ -18,8 +19,7 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+           <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={500}>
@@ -29,8 +29,7 @@ const Banner = () => {
             alt="Second slide"
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,8 +39,7 @@ const Banner = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <Button><Link className='text-white border-0' to="/allProducts">Explore More</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -13,6 +13,10 @@ import Header from './Component/HomePage/Header/Header';
 import Support from './Component/Support/Support';
 import Register from './Component/Register/Register';
 import Login from './Component/Login/Login';
+import Products from './Component/HomePage/Products/Products';
+import AllProducts from './Component/AllProducts/AllProducts';
+import ProductDetale from './Component/ProductDetale/ProductDetale';
+
 
 
 function App() {
@@ -22,6 +26,15 @@ function App() {
         <Header></Header>
         <Switch>
           
+          <Route path="/productDetale">
+            <ProductDetale></ProductDetale>
+          </Route>
+          <Route path="/allProducts">
+            <AllProducts></AllProducts>
+          </Route>
+          <Route path="/products">
+            <Products></Products>
+          </Route>
           <Route path="/support">
             <Support></Support>
           </Route>
