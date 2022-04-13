@@ -27,7 +27,7 @@ const ReviewInput = () => {
         <br />
 
         <input
-          className="btn-submit bg-primary text-white input-btn shadow"
+          className="btn-submit bg-primary text-white input-btn shadow rounded-pill p-2 fs-5 border border-secondary"
           type="submit"
           value="Please Give Your Review"
         />

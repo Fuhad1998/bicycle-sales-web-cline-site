@@ -18,6 +18,11 @@ import AllProducts from './Component/AllProducts/AllProducts';
 import ProductDetale from './Component/ProductDetale/ProductDetale';
 import Reviews from './Component/Reviews/Reviews';
 import Purchase from './Component/Purchas/Purchase';
+import MyOrders from './Component/MyOrders/MyOrders';
+import Pay from './Component/Pay/Pay';
+import ManageAllOrders from './Component/ManageAllOrders/ManageAllOrders';
+import AddAProduct from './Component/AddAProduct/AddAProduct';
+import MakeAdmin from './Component/MakeAdmin/MakeAdmin';
 
 
 
@@ -31,6 +36,21 @@ function App() {
         <Switch>
           
           
+          <Route path="/makeAdmin">
+            <MakeAdmin></MakeAdmin>
+          </Route>
+          <Route path="/addAProduct">
+            <AddAProduct></AddAProduct>
+          </Route>
+          <Route path="/manageAllOrders">
+            <ManageAllOrders></ManageAllOrders>
+          </Route>
+          <Route path="/pay">
+            <Pay></Pay>
+          </Route>
+          <Route path="/myOrders">
+            <MyOrders></MyOrders>
+          </Route>
           <Route path="/purchase/:id">
             <Purchase></Purchase>
           </Route>
