@@ -13,6 +13,19 @@ const Purchase = () => {
 
   const onSubmit = (data) => {
     data.orderName = item.name;
+    fetch("http://localhost:5000/orders", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            if (result.insertedId) {
+              alert("Successful Add Yours Orders");
+            }
+          });
   };
 
   useEffect(() => {

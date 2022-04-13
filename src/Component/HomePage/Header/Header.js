@@ -22,7 +22,7 @@ const Header = ({props}) => {
       aria-labelledby="offcanvasNavbarLabel"
       placement="end"
     >
-      <Offcanvas.Header className='w-25'>
+      <Offcanvas.Header closeButton>
         <Offcanvas.Title id="offcanvasNavbarLabel">Dashboard</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body >
