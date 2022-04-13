@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import './AllProduct.css'
 
 const AllProduct = ({allProduct}) => {
-    const {img, price, name} = allProduct;
+    const {img, price, name, id} = allProduct;
     return (
         <CardGroup className='col-md-4 col-xs-12 col-sm-12 py-2'>
         <Card className='p-2 border-0'>
           <Card.Img variant="top" src={img} />
           <Card.Body className='p-4'>
-            <Link className='link-name' to="/productDetale"><Card.Title>Name: {name}</Card.Title></Link>
+            <Link className='link-name' to={`/productDetale/${id}`}><Card.Title>Name: {name}</Card.Title></Link>
             <Card.Text>
               Price: {price}
             </Card.Text>

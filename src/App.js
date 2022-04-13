@@ -22,6 +22,7 @@ import Purchase from './Component/Purchas/Purchase';
 
 
 
+
 function App() {
   return (
     <div className="App login-bac-color">
@@ -29,13 +30,14 @@ function App() {
         <Header></Header>
         <Switch>
           
-          <Route path="/purchase">
+          
+          <Route path="/purchase/:id">
             <Purchase></Purchase>
           </Route>
           <Route path="/reviews">
             <Reviews></Reviews>
           </Route>
-          <Route path="/productDetale">
+          <Route path="/productDetale/:id">
             <ProductDetale></ProductDetale>
           </Route>
           <Route path="/allProducts">
