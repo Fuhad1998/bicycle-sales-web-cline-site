@@ -1,18 +1,19 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/UseAuth";
+import CircularProgress from '@mui/material/CircularProgress'
 
 const Register = () => {
-    
-        
-        const { register, handleSubmit } = useForm();
-        const onSubmit = (data) => {
-          
-          alert("Register success");
-        };
-    return (
-        <div className="container bg-white  Register-container my-5 shadow-lg">
-      <form className="login-from" onSubmit={handleSubmit(onSubmit)}>
+  const {registerUser, isloding} = useAuth();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    registerUser(data.email, data.password)
+    alert("Register success");
+  };
+  return (
+    <div className="container bg-white  Register-container my-5 shadow-lg">
+      { ! isloding && <form className="login-from" onSubmit={handleSubmit(onSubmit)}>
         <h1 className="p-2 ">Please Register</h1>
         <input
           className="input-btn p-2 rounded"
@@ -33,7 +34,7 @@ const Register = () => {
           type="submit"
           value="Register"
         />
-      
+
         <br />
 
         <Link className="p-3" to="/login">
@@ -44,9 +45,10 @@ const Register = () => {
             ALREADY REGISTERED? PLEASE LOG-IN
           </button>
         </Link>
-      </form>
+      </form>}
+      {isloding && <CircularProgress />}
     </div>
-    );
+  );
 };
 
 export default Register;

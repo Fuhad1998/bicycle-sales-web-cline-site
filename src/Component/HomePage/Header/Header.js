@@ -3,8 +3,10 @@ import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import './Header.css'
 
 import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/UseAuth";
 
 const Header = () => {
+  const {user, logOut} = useAuth();
   return (
     <Navbar bg="success" expand={false}>
       <Container fluid>
@@ -16,13 +18,20 @@ const Header = () => {
         >
           Home
         </Link>
-        <Link
-          className="text-white text-decoration-none fw-bold"
-          color="inherit"
-          to="/login"
-        >
-          Login
-        </Link>
+       {
+         user?.email ? 
+         <button className="text-white  text-decoration-none fw-bold " onClick={logOut}>
+            Log-Out
+          </button>
+         :
+         <Link
+         className="text-white text-decoration-none fw-bold"
+         color="inherit"
+         to="/login"
+       >
+         Login
+       </Link>
+       }
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"

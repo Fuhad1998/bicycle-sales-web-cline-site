@@ -23,6 +23,7 @@ import Pay from './Component/Pay/Pay';
 import ManageAllOrders from './Component/ManageAllOrders/ManageAllOrders';
 import AddAProduct from './Component/AddAProduct/AddAProduct';
 import MakeAdmin from './Component/MakeAdmin/MakeAdmin';
+import AuthProvider from './Context/AuthProvider/AuthProvider';
 
 
 
@@ -31,11 +32,10 @@ import MakeAdmin from './Component/MakeAdmin/MakeAdmin';
 function App() {
   return (
     <div className="App login-bac-color">
-      <Router>
+    <AuthProvider>
+    <Router>
         <Header></Header>
         <Switch>
-          
-          
           <Route path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
           </Route>
@@ -84,6 +84,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
+    </AuthProvider>
     
     </div>
   );
