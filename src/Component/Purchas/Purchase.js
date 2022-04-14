@@ -38,7 +38,7 @@ const Purchase = () => {
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-6">
           <img style={{width: "auto"}} src={item?.img} alt="" />
-          <h2 className="p-2">Name: {item?.name}</h2>
+          <h2 className="p-2"> {item?.name}</h2>
           <p>Id: {item?._id}</p>
 
             </div>

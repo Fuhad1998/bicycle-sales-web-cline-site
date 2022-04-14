@@ -1,10 +1,28 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
+
+
+import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 
 const ManageAllOrders = () => {
+    const [manageAllOrders, setManageAllOrders] = useState([])
+
+    useEffect(()=>{
+        fetch("http://localhost:5000/orders")
+        .then(res => res.json())
+        .then(data => setManageAllOrders(data))
+    }, [])
+
+    
     return (
-        <div>
-            <h1>All orders</h1>
-        </div>
+            <div className='m-5'>
+                <ManageAllOrder
+                manageAllOrders={manageAllOrders}
+                ></ManageAllOrder>
+            </div>
+
+
+
     );
 };
 

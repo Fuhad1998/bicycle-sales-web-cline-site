@@ -4,8 +4,8 @@
 }
 .link-name:hover{
     font-weight: 900;
-    font-size: large;
-    color: rgb(52, 70, 231);
+    font-size: larger;
+   color: #F3442F ;
 }
 
 .buy-now-btn{

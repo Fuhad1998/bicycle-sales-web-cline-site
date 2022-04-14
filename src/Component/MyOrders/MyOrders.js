@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import MyOrder from './MyOrder/MyOrder';
 
 const MyOrders = () => {
+    const [orders, setOrders] = useState([])
+
+    useEffect(()=>{
+        fetch("http://localhost:5000/orders")
+        .then(res => res.json())
+        .then(data => setOrders(data))
+    }, [])
     return (
-        <div>
-            <h1>This is my orders</h1>
+        <div className='m-5'>
+            <MyOrder
+            orders={orders}
+            ></MyOrder>
         </div>
     );
 };

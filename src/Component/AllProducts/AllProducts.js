@@ -9,7 +9,7 @@ const AllProducts = () => {
         .then(data => setAllProducts(data))
     }, [])
     return (
-        <div className='row bg-white p-2 '>
+        <div className='row bg-white p-4 '>
             <h1>All Products</h1>
             {
                 allProducts.map(allProduct => <AllProduct

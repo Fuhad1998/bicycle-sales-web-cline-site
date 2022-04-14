@@ -24,17 +24,17 @@ const ReviewInput = () => {
         <h2>Please Give Your Review</h2>
       <form className="review-from" onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="mb-3 p-2 input-btn shadow"
+          className="mb-3 p-2 input-btn shadow rounded"
           {...register("name")}
           placeholder="Write your name"
         />
         <input
-          className="input-btn p-2 shadow"
+          className="input-btn p-2 shadow rounded"
           {...register("email")}
           placeholder="Write your email"
         />
         <textarea
-          className="mt-3 input-btn p-2 shadow"
+          className="mt-3 input-btn p-2 shadow rounded"
           {...register("text")}
           placeholder="Write your "
         />

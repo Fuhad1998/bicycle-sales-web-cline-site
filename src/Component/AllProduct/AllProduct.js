@@ -11,11 +11,11 @@ const AllProduct = ({allProduct}) => {
         <Card className='p-2 border-0'>
           <Card.Img variant="top" src={img} />
           <Card.Body className='p-4'>
-            <Link className='link-name' to={`/productDetale/${id}`}><Card.Title>Name: {name}</Card.Title></Link>
-            <Card.Text>
+            <Link className='link-name' to={`/productDetale/${id}`}><Card.Title> {name}</Card.Title></Link>
+            <Card.Text className='fs-5 text-danger'>
               Price: {price}
             </Card.Text>
-            <Button><Link className='text-white buy-now-btn' to={`/purchase/${id}`}>Buy Now</Link></Button>
+            <Button><Link className='text-white buy-now-btn px-3' to={`/purchase/${id}`}>Buy Now</Link></Button>
           </Card.Body>
           
         </Card>

@@ -14,13 +14,13 @@ const Reviews = () => {
   }, [])
  
   return (
-   <div>
-      <div className="bg-white container">
+   <div className="bg-light">
+      <div className="bg-light container">
       
         
       <div className="row">
         <h1 className="pt-5">What Happy Customer</h1>
-        <h4>Say About Us</h4>
+        <h4 className="pt-2">Say About Us</h4>
 
         {
           reviews.map(review => <Card 
