@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/UseAuth";
 
 const Header = () => {
-  const {user, logOut} = useAuth();
+  const {user, logOut, admin} = useAuth();
   return (
-    <Navbar bg="success" expand={false}>
+    <Navbar bg="primary" expand={false}>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+        <Navbar.Brand href="#" className="text-white fs-4 ms-5">Trek Bicycle</Navbar.Brand>
         <Link
           className="text-white  text-decoration-none fw-bold home-btn"
           color="inherit"
@@ -66,20 +66,24 @@ const Header = () => {
               >
                 Manage All Orders
               </Link>
-              <Link
+              {
+                admin && <Link
                 className="  text-decoration-none fw-bold p-1 text-dark fs-5"
                 color="inherit"
                 to="/addAProduct"
               >
                 Add-A-Product
               </Link>
-              <Link
-                className="  text-decoration-none fw-bold p-1 text-dark fs-5"
-                color="inherit"
-                to="/makeAdmin"
-              >
-                Make Admin
-              </Link>
+              }
+             {
+               admin &&  <Link
+               className="  text-decoration-none fw-bold p-1 text-dark fs-5"
+               color="inherit"
+               to="/makeAdmin"
+             >
+               Make Admin
+             </Link>
+             }
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

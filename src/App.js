@@ -24,6 +24,7 @@ import ManageAllOrders from './Component/ManageAllOrders/ManageAllOrders';
 import AddAProduct from './Component/AddAProduct/AddAProduct';
 import MakeAdmin from './Component/MakeAdmin/MakeAdmin';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 
 
 
@@ -51,9 +52,9 @@ function App() {
           <Route path="/myOrders">
             <MyOrders></MyOrders>
           </Route>
-          <Route path="/purchase/:id">
+          <PrivateRoute path="/purchase/:id">
             <Purchase></Purchase>
-          </Route>
+          </PrivateRoute>
           <Route path="/reviews">
             <Reviews></Reviews>
           </Route>

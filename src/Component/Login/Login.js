@@ -4,14 +4,25 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/UseAuth";
 import CircularProgress from '@mui/material/CircularProgress'
 import "./Login.css";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-  const {loginUser, isloding} = useAuth();
+  const {loginUser, isloding, signInUsingGoole} = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  
+
+
   const onSubmit = (data) => {
-    loginUser(data.email, data.password)
+    loginUser(data.email, data.password, location, history)
     alert("Register success");
   };
+
+  const handelGoogleSignin = () =>{
+    signInUsingGoole(location, history)
+  }
   return (
     <div className="container bg-white  login-container my-5 shadow-lg">
       { ! isloding && <form className="login-from" onSubmit={handleSubmit(onSubmit)}>
@@ -36,7 +47,7 @@ const Login = () => {
           value="Login"
         />
         <br />
-        <button  className="btn-submit input-btn btn btn-primary login-bac-color text-white fs-5 rounded ">
+        <button onClick={handelGoogleSignin}  className="btn-submit input-btn btn btn-primary login-bac-color text-white fs-5 rounded ">
           Google Sign-in
         </button>
         <br />

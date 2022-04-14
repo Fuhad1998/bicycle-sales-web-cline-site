@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './Purchas.css'
 
@@ -7,6 +8,7 @@ const Purchase = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
 
   const item = product.find((pd) => pd.id == id);
   console.log(item);
@@ -23,6 +25,7 @@ const Purchase = () => {
           .then((res) => res.json())
           .then((result) => {
             if (result.insertedId) {
+              history.replace("/")
               alert("Successful Add Yours Orders");
             }
           });
