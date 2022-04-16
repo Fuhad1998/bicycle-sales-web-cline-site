@@ -71,7 +71,7 @@ const Purchase = () => {
             />
 
             <input
-              className="btn-submit input-btn shadow-sm rounded-pill bg-primary text-white p-2"
+              className="btn-submit border-0 input-btn shadow-sm rounded-pill bg-primary text-white p-2"
               type="submit"
               value="Please Orders Products"
             />

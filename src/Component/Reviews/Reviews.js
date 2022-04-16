@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+
+import Review from "./Review";
 import ReviewInput from "./ReviewInput";
+
 
 import "./Reviews.css";
 
@@ -23,20 +25,10 @@ const Reviews = () => {
         <h4 className="pt-2">Say About Us</h4>
 
         {
-          reviews.map(review => <Card 
-            key={review.id}
-            review={review}
-          className="col-md-4 col-xs-12 col-sm-12 review-container m-4" style={{ width: "20rem" }}>
-        
-          <Card.Body className="p-3"> 
-          
-            <Card.Title>Name: {review?.name}</Card.Title>
-            <Card.Text>
-              {review?.text}
-            </Card.Text>
-            
-          </Card.Body>
-        </Card>)
+          reviews.map(review => <Review
+          key={review?.id}
+          review={review}
+          ></Review>)
         }
         
         

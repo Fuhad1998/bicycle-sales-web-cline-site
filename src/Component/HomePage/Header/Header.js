@@ -59,13 +59,16 @@ const Header = () => {
               >
                 My Orders
               </Link>
-              <Link
+             
+              {
+                admin &&  <Link
                 className="  text-decoration-none fw-bold p-1 text-dark fs-5"
                 color="inherit"
                 to="/manageAllOrders"
               >
                 Manage All Orders
               </Link>
+              }
               {
                 admin && <Link
                 className="  text-decoration-none fw-bold p-1 text-dark fs-5"

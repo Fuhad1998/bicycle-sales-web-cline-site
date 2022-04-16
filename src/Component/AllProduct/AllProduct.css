@@ -2,13 +2,15 @@
     text-decoration: none;
     color: black;
 }
-.link-name:hover{
-    font-weight: 900;
-    font-size: larger;
-   color: #F3442F ;
-}
+
 
 .buy-now-btn{
     text-decoration: none;
     font-size: large;
+}
+
+
+
+.img-box:hover{
+transform: scale(1.3);
 }

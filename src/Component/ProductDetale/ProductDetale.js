@@ -29,7 +29,7 @@ const ProductDetale = () => {
           <h1 className="text-detale">{item?.name}</h1>
           <h4 className="text-detale text-danger">Price: {item?.price}</h4>
           <p className="text-detale">Description: {item?.description}</p>
-          <Button><Link className=' detale-btn text-white buy-now-btn px-3' to={`/purchase/${id}`}>Buy Now</Link></Button>
+          <Button className="d-grid justify-content-start"><Link className=' detale-btn text-white buy-now-btn px-3' to={`/purchase/${id}`}>Buy Now</Link></Button>
         </div>
       </div>
     </div>
