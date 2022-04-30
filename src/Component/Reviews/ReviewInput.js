@@ -3,7 +3,7 @@ import './Reviews.css'
 import { useForm } from "react-hook-form";
 
 const ReviewInput = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     fetch("https://hidden-refuge-86930.herokuapp.com/reviews", {
       method: "POST",
@@ -16,6 +16,7 @@ const ReviewInput = () => {
       .then((result) => {
         if (result.insertedId) {
           alert("successful Add reviews");
+          reset()
         }
       });
   };

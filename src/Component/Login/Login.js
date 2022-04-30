@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const {loginUser, isloding, signInUsingGoole} = useAuth();
   const location = useLocation();
   const history = useHistory();
@@ -18,6 +18,7 @@ const Login = () => {
   const onSubmit = (data) => {
     loginUser(data.email, data.password, location, history)
     alert("Register success");
+    reset()
   };
 
   const handelGoogleSignin = () =>{

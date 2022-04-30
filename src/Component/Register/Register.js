@@ -6,11 +6,12 @@ import CircularProgress from '@mui/material/CircularProgress'
 
 const Register = () => {
   const {registerUser, isloding} = useAuth();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data)
     registerUser(data.email, data.password, data.name)
     alert("Register success");
+    reset()
   };
   return (
     <div className="container bg-white  Register-container my-5 shadow-lg">

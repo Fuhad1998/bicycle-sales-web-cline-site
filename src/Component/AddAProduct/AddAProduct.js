@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import './AddAProduct.css'
 
 const AddAProduct = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
       fetch("https://hidden-refuge-86930.herokuapp.com/products", {
           method: "POST",
@@ -16,6 +16,7 @@ const AddAProduct = () => {
           .then((result) => {
             if (result.insertedId) {
               alert("successful Add A Product");
+              reset()
             }
           });
   };

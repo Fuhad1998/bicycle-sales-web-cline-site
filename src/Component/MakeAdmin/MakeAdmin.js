@@ -5,7 +5,7 @@ import './MakeAdmin.css'
 const MakeAdmin = () => {
     const [email, setEmail] = useState("");
     const [success, setSuccess] = useState(false);
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset} = useForm();
     const onSubmit = (data) => {
       console.log(data);
       setEmail(data);
@@ -24,6 +24,7 @@ const MakeAdmin = () => {
             setSuccess(true);
   
             alert("success");
+            reset()
           }
         });
     };

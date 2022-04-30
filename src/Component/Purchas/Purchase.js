@@ -7,7 +7,7 @@ import './Purchas.css'
 const Purchase = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const history = useHistory();
 
   const item = product.find((pd) => pd.id == id);
@@ -27,6 +27,7 @@ const Purchase = () => {
             if (result.insertedId) {
               history.replace("/")
               alert("Successful Add Yours Orders");
+              reset()
             }
           });
   };
