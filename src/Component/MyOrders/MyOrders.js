@@ -12,6 +12,7 @@ const MyOrders = () => {
     }, [])
     return (
         <div className='m-5'>
+            <h1 className='pb-3'>My Orders</h1>
             <MyOrder
             orders={orders}
             ></MyOrder>

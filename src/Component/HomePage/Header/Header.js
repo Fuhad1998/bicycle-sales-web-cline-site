@@ -20,7 +20,7 @@ const Header = () => {
         </Link>
        {
          user?.email ? 
-         <button className="text-white  text-decoration-none fw-bold " onClick={logOut}>
+         <button className="text-white bg-primary  text-decoration-none fw-bold border-0 " onClick={logOut}>
             Log-Out
           </button>
          :
